@@ -17,7 +17,9 @@ def read_file(file_name):
     """
     # Tips: kanksje "open"-funksjonen kunne være nyttig her: https://docs.python.org/3/library/functions.html#open
     file = open(file_name, encoding='UTF-8')
-    return list(file)  # TODO: Du må erstatte denne linjen
+    liste = list(file)
+    file.close()
+    return liste  # TODO: Du må erstatte denne linjen
 
 
 
