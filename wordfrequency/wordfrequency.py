@@ -40,14 +40,14 @@ def lines_to_words(lines):
     ord = []
     faktiskeord = []
     smaabokstaver = []
-    print(lines)
+    #print(lines)
     for x in lines:
         ord.extend(x.split(' '))
-    print(ord)
+    #print(ord)
     for y in ord:
         y2 = str(y)
         faktiskeord.append(y2.strip('.:;,?!\n '))
-    print(faktiskeord)
+    #print(faktiskeord)
     for z in faktiskeord:
         if z == '':
             faktiskeord.remove(z)
