@@ -99,7 +99,13 @@ def largest_pair(par_1, par_2):
     """
     # OBS: Tenk også på situasjonen når to tall er lik! Vurder hvordan du vil handtere denne situasjonen
     # kanskje du vil skrive noen flere test metoder ?!
-    return NotImplemented  # TODO: Du må erstatte denne linjen
+    heltall1 = par_1[1]
+    heltall2 = par_2[1]
+    if heltall1 > heltall2:
+        storst = par_1
+    else:
+        storst = par_2
+    return storst  # TODO: Du må erstatte denne linjen
 
 
 def find_most_frequent(frequency_table):
