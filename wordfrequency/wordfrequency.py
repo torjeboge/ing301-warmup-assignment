@@ -22,7 +22,6 @@ def read_file(file_name):
     return liste  # TODO: Du må erstatte denne linjen
 
 
-
 def lines_to_words(lines):
     """
     Denne funksjonen får en liste med strenger som input (dvs. linjene av tekstfilen som har nettopp blitt lest inn)
@@ -38,7 +37,24 @@ def lines_to_words(lines):
     # Tips: se på "split()"-funksjonen https://docs.python.org/3/library/stdtypes.html#str.split
     # i tillegg kan "strip()": https://docs.python.org/3/library/stdtypes.html#str.strip
     # og "lower()": https://docs.python.org/3/library/stdtypes.html#str.lower være nyttig
-    return NotImplemented  # TODO: Du må erstatte denne linjen
+    ord = []
+    faktiskeord = []
+    smaabokstaver = []
+    print(lines)
+    for x in lines:
+        ord.extend(x.split(' '))
+    print(ord)
+    for y in ord:
+        y2 = str(y)
+        faktiskeord.append(y2.strip('.:;,?!\n '))
+    print(faktiskeord)
+    for z in faktiskeord:
+        if z == '':
+            faktiskeord.remove(z)
+        else:
+            smaabokstaver.append(z.lower())
+    return smaabokstaver  # TODO: Du må erstatte denne linjen
+#lines_to_words(["Det er", "bare", "noen få ord;"])
 
 
 def compute_frequency(words):
@@ -49,7 +65,13 @@ def compute_frequency(words):
 
     F. eks. Inn ["hun", "hen", "han", "hen"], Ut: {"hen": 2, "hun": 1, "han": 1}
     """
-    return NotImplemented  # TODO: Du må erstatte denne linjen
+    freq = {}
+    for n in words :
+        if n in freq:
+            freq[n] += 1
+        else:
+            freq[n] = 1
+    return freq  # TODO: Du må erstatte denne linjen
 
 
 FILL_WORDS = ['og', 'dei', 'i', 'eg', 'som', 'det', 'han', 'til', 'skal', 'på', 'for', 'då', 'ikkje', 'var', 'vera']
