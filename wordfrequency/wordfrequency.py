@@ -85,8 +85,10 @@ def remove_filler_words(frequency_table):
     Målet med denne funksjonen er at den skal få en frekvenstabll som input og så fjerne alle fyll-ord
     som finnes i FILL_WORDS.
     """
-    return NotImplemented  # TODO: Du må erstatte denne linjen
-
+    for ord in FILL_WORDS:
+        if ord in frequency_table:
+            del frequency_table[ord]
+    return frequency_table  # TODO: Du må erstatte denne linjen
 
 def largest_pair(par_1, par_2):
     """
