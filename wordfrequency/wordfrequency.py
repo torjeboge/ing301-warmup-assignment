@@ -115,8 +115,14 @@ def find_most_frequent(frequency_table):
     """
     # Tips: se på "dict.items()" funksjonen (https://docs.python.org/3/library/stdtypes.html#dict.items)
     # og kanskje du kan gjenbruke den "largest_pair" metoden som du nettopp har laget
-    return NotImplemented  # TODO: Du må erstatte denne linjen
 
+    storst = 0
+
+    for key, value in frequency_table.items():
+        if value > storst:
+            storst = value
+            most_frequent = key
+    return most_frequent  # TODO: Du må erstatte denne linjen
 
 ############################################################
 #                                                          #
